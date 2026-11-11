@@ -1,0 +1,54 @@
+{
+	"editor.tabSize": 2,
+	"editor.wordWrap": "on",
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"makefile.configureOnOpen": true,
+	"editor.fontWeight": "normal",
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	"claudeCode.preferredLocation": "panel",
+	"json.schemaDownload.trustedDomains": {
+		"https://schemastore.azurewebsites.net/": true,
+		"https://raw.githubusercontent.com/microsoft/vscode/": true,
+		"https://raw.githubusercontent.com/devcontainers/spec/": true,
+		"https://www.schemastore.org/": true,
+		"https://json.schemastore.org/": true,
+		"https://json-schema.org/": true
+	},
+	"editor.accessibilitySupport": "off",
+	"notebook.output.scrolling": true,
+	"notebook.output.textLineLimit": 20,
+	"vim.useSystemClipboard": true,
+	"vim.surround": true,
+	"vim.easymotion": true,
+	"extensions.experimental.affinity": {
+		"vscodevim.vim": 1
+	},
+
+	"vim.insertModeKeyBindingsNonRecursive": [
+		{ "before": ["P", "P"], "after": ["<Esc>", "p", "a"] }
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		// Half-page down/up, then center
+		{ "before": ["D"], "after": ["<C-d>", "z", "z"] },
+		{ "before": ["U"], "after": ["<C-u>", "z", "z"] },
+
+		// Redo
+		{ "before": ["R"], "after": ["<C-r>"] },
+
+		// Delete the current line
+		{ "before": ["x", "x"], "after": ["V", "x"] },
+
+		// Select the entire buffer
+		{ "before": ["=", "="], "after": ["g", "g", "V", "G"] },
+
+		// Append a comma to the end of the line
+		{ "before": [",", ","], "after": ["g", "$", "a", ",", "<Esc>"] },
+		{ "before": ["f"], "after": ["<leader>", "<leader>", "s"] },
+		{ "before": ["F"], "after": ["v", "<leader>", "<leader>", "s"] }
+	]
+}
