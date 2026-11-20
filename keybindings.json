@@ -1,4 +1,14 @@
 [
+	{
+		"key": "backspace",
+		"command": "deleteLeft",
+		"when": "editorTextFocus && !editorReadonly && vim.mode == 'Normal'"
+	},
+	{
+		"key": "shift+backspace",
+		"command": "deleteRight",
+		"when": "editorTextFocus && !editorReadonly && (vim.mode == 'Normal' || vim.mode == 'Insert')"
+	},
 	// Navigation
 	{
 		"key": "ctrl-h",
@@ -49,12 +59,12 @@
 		"command": "workbench.action.toggleSidebarVisibility"
 	},
 	{
-		"key": "s h",
+		"key": "space s h",
 		"command": "workbench.action.splitEditor",
 		"when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
 	},
 	{
-		"key": "s v",
+		"key": "space s v",
 		"command": "workbench.action.splitEditorDown",
 		"when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
 	},
@@ -76,9 +86,16 @@
 		"when": "vim.mode == 'VisualLine' && editorTextFocus"
 	},
 	{
-		"key": "shift-k",
-		"command": "editor.action.showHover",
-		"when": "vim.mode == 'Normal' && editorTextFocus"
+		"key": "shift+j",
+		"command": "vim.remap",
+		"when": "vim.mode == 'Normal' && editorTextFocus",
+		"args": { "after": [] }
+	},
+	{
+		"key": "shift+k",
+		"command": "vim.remap",
+		"when": "vim.mode == 'Normal' && editorTextFocus",
+		"args": { "after": [] }
 	},
 	{
 		"key": "space c r",

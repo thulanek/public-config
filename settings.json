@@ -24,13 +24,20 @@
 	"notebook.output.textLineLimit": 20,
 	"vim.useSystemClipboard": true,
 	"vim.surround": true,
+	"vim.targets.enable": true,
+	"vim.targets.bracketObjects.enable": false,
 	"vim.easymotion": true,
 	"extensions.experimental.affinity": {
 		"vscodevim.vim": 1
 	},
 
 	"vim.insertModeKeyBindingsNonRecursive": [
-		{ "before": ["P", "P"], "after": ["<Esc>", "p", "a"] }
+		{ "before": ["P", "P"], "after": ["<Esc>", "p", "a"] },
+		{ "before": ["K", "K"], "after": ["<up>"] },
+		{ "before": ["L", "L"], "after": ["<right>"] },
+		{ "before": ["J", "J"], "after": ["<down>"] },
+		{ "before": ["H", "H"], "after": ["<left>"] },
+		{ "before": [",", ","], "after": ["<Esc>", "A", ","] }
 	],
 	"vim.normalModeKeyBindingsNonRecursive": [
 		// Half-page down/up, then center
@@ -48,7 +55,8 @@
 
 		// Append a comma to the end of the line
 		{ "before": [",", ","], "after": ["g", "$", "a", ",", "<Esc>"] },
-		{ "before": ["f"], "after": ["<leader>", "<leader>", "s"] },
+		{ "before": ["s"], "after": ["<leader>", "<leader>", "s"] },
 		{ "before": ["F"], "after": ["v", "<leader>", "<leader>", "s"] }
-	]
+	],
+	"editor.lineNumbers": "relative"
 }
